@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #1a2980, #26d0ce);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.slogan {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    background: white;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #1a2980;
+    border-left: 5px solid #26d0ce;
+    padding-left: 15px;
+}
+
+.cartes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.carte {
+    background: #f8f9ff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    border: 2px solid #e0e7ff;
+    transition: transform 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+    border-color: #26d0ce;
+}
+
+a {
+    color: #1a2980;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #26d0ce;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+.citation {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Pour les téléphones */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    section { padding: 1.5rem; }
+    .cartes { grid-template-columns: 1fr; }
+}
