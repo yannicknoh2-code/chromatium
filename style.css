@@ -39,6 +39,13 @@ h1 {
     margin-top: 0.5rem;
 }
 
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
 /* ===== SECTIONS PRINCIPALES ===== */
 main {
     padding-bottom: 3rem;
@@ -69,6 +76,7 @@ h2 {
 #projet p {
     font-size: 1.1rem;
     line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
 /* ===== SECTION TECHNOLOGIES ===== */
@@ -116,6 +124,56 @@ h2 {
     line-height: 1.6;
 }
 
+/* ===== SECTION COMPARAISON ===== */
+#comparaison {
+    text-align: center;
+}
+
+.statistiques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    min-width: 200px;
+    border: 2px solid #d0d7ff;
+}
+
+.stat.bitcoin {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    border-color: #fd9644;
+}
+
+.stat .nombre {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a2980;
+    margin-bottom: 0.5rem;
+}
+
+.stat.bitcoin .nombre {
+    color: #e17055;
+}
+
+.stat .label {
+    font-size: 1rem;
+    color: #555;
+    max-width: 180px;
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
 /* ===== SECTION LIENS ===== */
 #liens p {
     margin: 1rem 0;
@@ -139,6 +197,51 @@ h2 {
 
 #liens strong {
     color: #1a2980;
+}
+
+.liens-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.lien-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8f9ff;
+    border-radius: 10px;
+    border-left: 4px solid #26d0ce;
+    transition: all 0.3s;
+}
+
+.lien-item:hover {
+    background: #f0f4ff;
+    transform: translateX(5px);
+}
+
+.lien-item .emoji {
+    font-size: 1.8rem;
+}
+
+.lien-item .lien {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lien-item .lien strong {
+    display: block;
+    color: #1a2980;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.lien-item .lien span {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* ===== SECTION VISION ===== */
@@ -251,6 +354,47 @@ footer a:hover {
     font-size: 1.1rem;
 }
 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #1a2980;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-left: none;
+    padding-left: 0;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #777;
+}
+
+.footer-links a {
+    color: #1a2980;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #26d0ce;
+    text-decoration: underline;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     body {
@@ -311,6 +455,24 @@ footer a:hover {
     footer {
         padding: 2rem 1rem;
     }
+    
+    .statistiques {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .vs {
+        margin: 0.5rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -329,6 +491,14 @@ footer a:hover {
     #vision .btn {
         font-size: 1rem;
         padding: 0.9rem 1.8rem;
+    }
+    
+    .liens-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat {
+        min-width: 100%;
     }
 }
 
@@ -369,4 +539,104 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #162471, #20b4b2);
-        }
+}
+
+/* ===== STYLES SPÉCIFIQUES POUR ORDINATEUR-CHROMATINE.HTML ===== */
+.hero-vision {
+    background: linear-gradient(90deg, #0d193d, #1a5f7c);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 3rem;
+}
+
+.hero-vision h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-vision .tagline {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.comparaison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comparaison-table th, .comparaison-table td {
+    padding: 1.2rem;
+    border: 1px solid #e1e4e8;
+    text-align: left;
+}
+
+.comparaison-table th {
+    background: #1a2980;
+    color: white;
+    font-weight: bold;
+}
+
+.comparaison-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.highlight {
+    background: #fff3cd !important;
+    font-weight: bold;
+}
+
+.chiffre-impact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.chiffre-impact .nombre {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.section-nav a {
+    padding: 0.8rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #1a2980;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.section-nav a:hover {
+    background: #1a2980;
+    color: white;
+    border-color: #1a2980;
+}
+
+.retour-accueil {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    padding-top: 2rem;
+    border-top: 2px dashed #ddd;
+    }
